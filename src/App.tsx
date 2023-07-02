@@ -14,7 +14,7 @@ import { DocumentProvider } from './contexts/document'
 import JoinRoom from './components/rooms/JoinRoom'
 function App() {
   const auth = useAuth();
-const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {

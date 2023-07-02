@@ -4,7 +4,7 @@ import {  useForm } from 'react-hook-form';
 import { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../contexts/user';
-import {useNavigate, Navigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import { useLocation } from 'react-router-dom';
 
 type FormValues={
@@ -35,7 +35,7 @@ const Login=()=>{
     })
 
     let formOptions = { resolver: yupResolver(formSchema) }
-    let { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>(formOptions)
+    let { register, handleSubmit, formState: { errors } } = useForm<FormValues>(formOptions)
 
     const emailHandler=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setEmail(e.target.value);

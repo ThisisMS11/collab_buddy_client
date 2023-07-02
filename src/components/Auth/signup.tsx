@@ -35,7 +35,7 @@ const Signup=()=>{
     })
 
     const formOptions = { resolver: yupResolver(formSchema) }
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>(formOptions)
+    const { register, handleSubmit, formState: { errors } } = useForm<FormValues>(formOptions)
 
     const emailHandler=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setEmail(e.target.value);

@@ -12,7 +12,6 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import CircularIndeterminate2 from "../../loading2";
-import { useNavigate } from "react-router-dom";
 
 const Body = () => {
     const [loading, setLoading] = useState(false);
@@ -22,7 +21,6 @@ const Body = () => {
     const [documentAccessibility, setDocumentAccessibility] = useState<string>("private");
     const [errorMessages, setErrorMessages] = useState<string | null>(null);
     const [open, setOpen] = useState(false);
-    const navigate = useNavigate();
 
     useEffect(() => {
         const getAllDocuments = async () => {

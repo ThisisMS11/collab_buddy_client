@@ -48,7 +48,7 @@ const Edit_document_source = () => {
         const s = (io as any).connect(END_POINT);
 
         s.on('connect', () => {
-            const email= auth.user?.email  as string;
+            const email = auth.user?.email as string;
             s.emit('add-user', email);
         })
 
@@ -57,7 +57,7 @@ const Edit_document_source = () => {
 
             console.log(auth.user);
 
-            const email= auth.user?.email  as string;
+            const email = auth.user?.email as string;
             s.emit('remove-user', email);
             s.disconnect();
         }
@@ -65,7 +65,7 @@ const Edit_document_source = () => {
 
 
     useEffect(() => {
-        socket?.on('get-online-users', (OU) => {
+        socket?.on('get-online-users', (OU: string[]) => {
             console.log(OU);
 
 

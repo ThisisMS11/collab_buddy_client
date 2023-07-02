@@ -1,5 +1,5 @@
 import { useAuth } from "../contexts/user"
-import { useNavigate,Navigate,useLocation } from "react-router-dom"
+import { Navigate,useLocation } from "react-router-dom"
 
 type AuthRequireProps={
     children:React.ReactNode
@@ -7,7 +7,6 @@ type AuthRequireProps={
 
 const AuthRequire = ({children}:AuthRequireProps) => {
     const auth=useAuth()
-    const navigate=useNavigate()
     const location=useLocation()
 
     if(!auth.user){
